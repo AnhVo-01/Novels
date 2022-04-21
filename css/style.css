@@ -1,5 +1,23 @@
 *{
-  margin: 0;
-  border: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* ---------------------------------------------------------- */
+:root {
+    --body-color: #efefef;
+    --bs-color: #efefef;
+    --div-color: #fff;
+    --bg-color: tomato;
+    --text-color: #000;
+}
+
+.dark-theme {
+    --body-color: #313335;
+    --bs-color: #242526;
+    --div-color: #0a0a0a;
+    --bg-color: #242526;
+    --text-color: #ecf3ff;
 }
