@@ -7,13 +7,14 @@
 
 /* ---------------------------------------------------------- */
 :root {
-    --bg-color: #121212;
+    --bg-color: #313536;
     --head-color: #242f39;
-    --body-color: #efefef;
+    /* --body-color: #efefef; */
+    --body-color: #242526;
     --bs-color: #efefef;
     --div-color: #fff;
     /* --text-color: #000; */
-    --text-color: #ecf3ff;
+    --text-color: #efefef;
 
     /* ====== Transition ====== */
     --tran-02: all 0.2s ease;
@@ -58,13 +59,14 @@ a{
     text-decoration: none;
 }
 body{
-    background: var(--head-color);
+    background: var(--body-color);
 }
 .container{
     width: 100%;
     padding: 0 15px;
     margin: 0 auto;
     position: relative;
+    z-index: 100;
 }
 .sidebar header .toggle{
     position: absolute;
@@ -125,7 +127,7 @@ header .image img{
     display: flex;
     justify-content: space-between;
     font-size: 12px;
-    padding: 0 20px;
+    padding: 15px 20px;
 }
 .menu .text,
 .menu .icon{
@@ -137,18 +139,20 @@ header .image img{
     white-space: nowrap;
     opacity: 1;
 }
+.dropdown.open{
+    color: #fff;
+    background: #2f566d;
+}
 .dropdown-menu{
     background: #2f566d;
     position: absolute;
     top: 100%;
-    z-index: 1000;
     display: none;
-    float: left;
+    z-index: 1000;
     min-width: 160px;
     padding: 5px 0;
     margin: 2px 0 0;
     list-style: none;
-    font-size: 14px;
     border: 1px solid rgba(0,0,0,0.15);
     border-radius: 4px;
     -webkit-box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
@@ -158,12 +162,16 @@ header .image img{
 }
 .dropdown-menu li{
     padding: 10px;
+    font-size: 16px;
 }
 .dropdown-menu li:hover{
     background: #1f3847;
 }
 .dropdown-menu a{
     color: #ffffe6;
+}
+.dropdown.open .dropdown-menu{
+    display: block;
 }
 .search-box{
     display: flex;
@@ -179,14 +187,16 @@ header .image img{
     background: #1c242d;
     color: #62809d;
     border: 0;
-    padding: 10px;
+    padding: 8px;
 }
 .search-box input{
     background: #1c242d;
     color: var(--text-color);
     border: 0;
-    padding: 10px;
+    padding: 8px 10px;
     border-radius: 0;
+    outline: none;
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
 }
 
 .head-local{
@@ -223,12 +233,120 @@ header .image img{
     color: #ccc;
 }
 
+/* =========================== Main Content =========================== */
+.title{
+    padding: 15px 0;
+}
+.novels-title{
+    display: table;
+    font-size: 24px;
+    margin: 0 auto 5px;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', Tahoma, sans-serif;
+    color: #82a82d;
+    text-shadow: 0 0 1px #000;
+}
+.novels-title:hover{
+    color: #9bc936;
+}
+.row h2 a:hover,
+.row h2 a:focus{
+    color: #b1b1b1;
+}
+.chapter-title{
+    display: table;
+    margin: 0 auto 5px;
+    color: #808080;
+    font-size: 16px;
+}
+
+hr.chapter-start{
+    background: url('/images/spriteimg_new_white_op.png') -200px -27px no-repeat;
+    width: 59px;
+    height: 20px;
+    border: 0;
+    margin: 10px auto;
+    display: table;
+}
+hr.chapter-end{
+    background: url('/images/spriteimg_new_white_op.png') 0 -51px no-repeat;
+    width: 277px;
+    height: 35px;
+    border: 0;
+    margin: 10px auto;
+    display: table;
+}
+
+.chapter-nav{
+    padding: 10px 0;
+    font-size: 16px;
+}
+.chapter-list{
+    font-size: 16px;
+    width: 170px;
+    transition: var(--tran-04);
+    display: none;
+}
+.btn-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+.btn-chapter-nav{
+    background: #1c242d;
+    color: #62809d;
+    border: 1px solid #62809d;
+    padding: 8px;
+    margin: 0 2px;
+}
+.btn-chapter-nav:hover{
+    color: #b1c0ce;
+    border-color: #b1c0ce;
+}
+.btn-chapter-nav.jump{
+    width: 120px;
+}
+.btn-prev{
+    border-radius: 5px 0 0 5px;
+}
+.btn-next{
+    border-radius: 0 5px 5px 0;
+}
+/* ---------------------------------- main ---------------------------- */
+.main{
+    color: var(--text-color);
+    font-size: 24px;
+    line-height: 180%;
+    text-align:justify;
+    word-wrap: break-word;
+}
+/* -------------------------------------------------------------------- */
+.wrap {
+    position: fixed;
+    right: 50px;
+    bottom: 60px;
+}
+.wrap-btn {
+    background: #1c242d;
+    color: #62809d;
+    border: 2px solid #62809d;
+    border-radius: 5px;
+    padding: 8px 10px;
+    margin: 0 2px;
+}
+.wrap-btn:hover {
+    color: #b1c0ce;
+    border-color: #b1c0ce;
+}
+
 footer{
     background: var(--bg-color);
     color: #8d8d8d;
     height: 50px;
     display: flex;
     align-items: center;
+    padding: 0 15px;
 }
 footer a{
     color: #b1b1b1;

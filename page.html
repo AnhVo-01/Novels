@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/page.css">
     <script src="js/fontAwesome.js"></script>
 </head>
 <body>
-    <nav class="sidebar close">
+    <nav class="sidebar close" id="top-of-page">
         <header>
             <div class="container">
                 <div class="header">
@@ -43,7 +43,7 @@
                                         <span class="text nav-text">Phân loại theo chương</span>
                                         <i class="fa-solid fa-caret-down icon"></i>
                                     </a>
-                                    <ul class="dropdown-menu">
+                                    <ul class="dropdown-menu" aria-expanded="false">
                                         <li>
                                             <a href="https://truyenfull.vn/top-truyen/duoi-100-chuong/" title="Dưới 100 chương">Dưới 100 chương</a>
                                         </li>
@@ -78,6 +78,7 @@
                             </div>
                         </form>
                     </div>
+                    <script src="js/navcontroll.js"></script>
                 </div>
             </div>
             <div class="head-local">
@@ -115,8 +116,86 @@
     </nav>
     <div class="container">
         <div class="row">
-            <a class="truyen-title" href="https://truyenfull.vn/tinh-vu-cuu-than/" title="Tinh Vũ Cửu Thần">Tinh Vũ Cửu Thần</a>
+            <div class="title">
+                <a class="novels-title" href="#" title="Tinh Vũ Cửu Thần">Tinh Vũ Cửu Thần</a>
+                <h2>
+                    <a class="chapter-title" href="#" title="">
+                        <span class="chapter-text">
+                            <span>Chương </span>
+                        </span>114: Động thủ
+                    </a>
+                </h2>
+                <hr class="chapter-start">
+                <div class="chapter-nav" id="chapter-nav-top">
+                    <div class="btn-group">
+                        <a class="btn-chapter-nav jump btn-prev" href="#" title="" id="prev_chap">
+                            <i class="fa-solid fa-angle-left"></i>
+                            <span class="hidden-xs">Prev </span>
+                        </a>
+                        <a class="btn-chapter-nav" href="index.html">
+                            <i class="fa-solid fa-house"></i>
+                        </a>
+                        <a href="#" class="btn-chapter-nav show-list" onclick="showList()">
+                            <i class="fa-solid fa-bars fa-lg"></i>
+                        </a>
+                        <select class="btn-chapter-nav chapter-list" name="" id="">
+                            <option value="">Chương 1</option>
+                            <option value="chuong-114" selected>Chương 114</option>
+                            <option>Chương 115</option>
+                        </select>
+                        <a class="btn-chapter-nav jump btn-next" href="#" title="" id="next_chap">
+                            <span class="hidden-xs">Next </span>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <hr class="chapter-end">
+
+                <!-- ---main-content--- -->
+                <div class="main">
+                    Tạ Tinh nghĩ đến người phụ nữ đối chiến với cậu trong lúc tuyển sinh ở học viện La Thiên, cô biết thân phận của cậu. Trần Khai Phi biết được cậu là Tạ Tinh tuyệt đối là từ miệng người phụ nữ này. không ngờ Kỷ Minh chết rồi lại còn để cho cậu một phiền phức lớn như vậy
+                    <br>
+                    <br>
+                    Bây giờ cách duy nhất là giết chết người phụ nữ đó, nếu như ở bí cảnh cô ta chưa chết, thì lúc này khẳng định là đang ở quảng trường. chỉ mong cô không nói ra, nhưng Tạ Tinh biết được chuyện này rất khó khăn, dù sao nếu Vấn Nguyệt tông bắt đầu tìm kiếm thân phận cậu với giá cao thì khó ai cự tuyệt được
+                    <br>
+                    <br>
+                    Làm sao đây? nếu như Vấn Nguyệt tông tông chủ biết được cậu là luyện đan sư, mà còn là Lôi tinh nguyên tu tinh giả, vậy rất có khả năng nghi ngờ mình. con của hắn là người gì thì hắn nhất định đã biết, nên chuyện cậu có được linh thảo số lượng lớn như vậy con của hắn nhất định sẽ kiếm chuyện, hắn thậm chí xác định là cậu là người đã giết con hắn
+                    <br>
+                    <br>
+                </div>
+
+                <hr class="chapter-end">
+                <div class="chapter-nav" id="chapter-nav-bottom">
+                    <div class="btn-group">
+                        <a class="btn-chapter-nav jump btn-prev" href="#" title="" id="prev_chap">
+                            <i class="fa-solid fa-angle-left"></i>
+                            <span class="hidden-xs">Prev </span>
+                        </a>
+                        <a class="btn-chapter-nav" href="index.html">
+                            <i class="fa-solid fa-house"></i>
+                        </a>
+                        <a href="#" class="btn-chapter-nav show-list" onclick="showList()">
+                            <i class="fa-solid fa-bars fa-lg"></i>
+                        </a>
+                        <select class="btn-chapter-nav chapter-list" name="">
+                            <option value="">Chương 1</option>
+                            <option value="chuong-114" selected>Chương 114</option>
+                            <option>Chương 115</option>
+                        </select>
+                        <a class="btn-chapter-nav jump btn-next" href="#" title="" id="next_chap">
+                            <span class="hidden-xs">Next </span>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <script src="js/chapter-list.js"></script>
+            </div>
         </div>
+    </div>
+    <div class="wrap">
+        <a class="wrap-btn" href='#top-of-page' title="Back to top">
+            <i class="fa-solid fa-angles-up fa-lx"></i>
+        </a>
     </div>
     <footer>
         <p>
