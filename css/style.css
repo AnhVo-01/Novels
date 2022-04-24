@@ -307,7 +307,7 @@ header .image img{
 .item-full {
     position: relative;
     margin: 10px;
-    width: 164px;
+    width: calc(100% / 7);
 }
 .item-full a:hover{
     text-decoration: none;
@@ -365,7 +365,7 @@ header .image img{
 /* -------------------------------------------------------------------- */
 .wrap {
     position: fixed;
-    right: 50px;
+    right: 5%;
     bottom: 60px;
     z-index: 300;
 }
@@ -389,6 +389,7 @@ footer{
     display: flex;
     align-items: center;
     padding: 0 15px;
+    font-size: 14px;
 }
 footer a{
     color: #b1b1b1;
@@ -399,6 +400,22 @@ footer a{
     .container {
         max-width: 970px;
     }
+    .item {
+        margin: 2% 0 0 3%;
+        height: auto;
+        width: calc(100% / 4);
+        min-height: 120px;
+    }
+    .full-label {
+        bottom: 0;
+        background-size: 80% 80%;
+        margin-left: -5px;
+    }
+    .item-img {
+        width: 100%;
+        height: 100%;
+        min-height: 120px;
+    }
 }
 @media (max-width: 768px){
     .header{
@@ -407,19 +424,25 @@ footer a{
     .search-box{
         display: none;
     }
+    .container {
+        max-width: 750px;
+    }
     .column{
         grid-template-columns: repeat(1, 1fr);
     }
-    .right{
+    .category{
         display: none;
     }
-    .container {
-        max-width: 750px;
+    .item-full{
+        width: calc(100% / 5);
     }
 }
 @media (max-width: 576px){
     .container {
         max-width: 540px;
+    }
+    .item-full{
+        width: calc(100% / 3);
     }
 }
 

@@ -118,6 +118,8 @@
             <div class="column">
                 <div>
                     <div class="novel-info">
+                        <div></div>
+                        <h3 class="book-title">TINH VŨ CỬU THẦN</h3>
                         <div class="info">
                             <img style="border-radius: 5px;" src="images/book-cover.png" alt="book-cover">
                             <div class="info-intro">
@@ -138,7 +140,6 @@
                         </div>
                             
                         <div class="info-content">
-                            <h3 class="book-title">TINH VŨ CỬU THẦN</h3>
                             <div class="rate">
                                 <div class="rate-holder" style="cursor: pointer;">
                                     <i class="fa-solid fa-star"></i>
@@ -150,17 +151,21 @@
                                 </div>
                             </div>
                             <div class="desc-text">
-                                <b>Thể loại:</b> huyền huyễn, huyền huyễn khoa học, tu chân...
-                                <br><br>
                                 Nhiều khi hắn cũng cảm thấy thỏa mã cũng bởi khi chết thì hắn được chết trong lòng nữ nhân mà hắn thương nhớ trong nhiều năm. Nhưng không biết tại sao khi hắn tình dậy thì lại phát hiện&nbsp; được linh hồn của mình lại xuyên không đến một nơi xa lạ.
                                 <br><br>
                                 Đành chấp nhận xuyên thì xuyên thôi mà, nhưng tại sao sau đó hắn lại phát hiện mình đã ngã xuống trong chiến trường?
                                 <br><br>
                                 Được rồi, đứng lên! Nhưng thật vất vả từ trong đống người chết bò ra ngoài, rồi lại phát hiện mình chỗ ở quân đội chính diện lâm vào cảnh toàn quân chết hết? Vì vậy hắn lại thở dài nói: "Cái này bảo là ta làm sao chịu nổi a..."
                             </div>
-                            <div class="show-more">
-                                <a href="#">more »</a>
+                            <div class="show-more" onclick="show()">
+                                <a href="##">more »</a>
                             </div>
+                                <script>
+                                    function show(){
+                                        var show = document.querySelector(".desc-text");
+                                        show.style.display = "inline";
+                                    }
+                                </script>
                             <div class="l-chapter">
                                 <div class="l-title">
                                     <h3>Các chương mới nhất</h3>

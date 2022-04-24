@@ -329,7 +329,7 @@ hr.chapter-end{
 /* -------------------------------------------------------------------- */
 .wrap {
     position: fixed;
-    right: 50px;
+    right: 5%;
     bottom: 60px;
     z-index: 300;
 }
