@@ -158,12 +158,14 @@
                                 Được rồi, đứng lên! Nhưng thật vất vả từ trong đống người chết bò ra ngoài, rồi lại phát hiện mình chỗ ở quân đội chính diện lâm vào cảnh toàn quân chết hết? Vì vậy hắn lại thở dài nói: "Cái này bảo là ta làm sao chịu nổi a..."
                             </div>
                             <div class="show-more" onclick="show()">
-                                <a href="##">more »</a>
+                                <span id="showBtn">more »</span>
                             </div>
                                 <script>
                                     function show(){
                                         var show = document.querySelector(".desc-text");
+                                        var myBtn = document.getElementById("showBtn");
                                         show.style.display = "inline";
+                                        myBtn.style.display = "none";
                                     }
                                 </script>
                             <div class="l-chapter">

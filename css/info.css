@@ -326,7 +326,8 @@ header .image img{
     justify-content: flex-end;
     margin: 5px 0;
 }
-.show-more a{
+.show-more span{
+    cursor: pointer;
     background: #1c242d;
     color: #3b4d5e;
     border: 1px solid #3b4d5e;
@@ -394,7 +395,7 @@ header .image img{
     border: 1px solid #a1b3c4;
 }
 .paging .teleport:hover,
-.show-more a:hover,
+.show-more span:hover,
 .paging a:hover,
 .card a:hover{
     color: #a1b3c4;
