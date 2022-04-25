@@ -80,7 +80,7 @@ body{
 }
 .sidebar header .toggle{
     position: absolute;
-    left: 30px;
+    right: 30px;
     height: 25px;
     width: 25px;
     background: #2f566d;
