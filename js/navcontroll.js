@@ -3,12 +3,15 @@ const opt = document.querySelectorAll(".dropdown"),
 
 for (let i = 0; i < opt.length; i++){
     opt[i].addEventListener("click", function() {
-        for (let j = 0; j < opt.length; j++){
-            if(opt[j].classList.contains("open")){
-                opt[j].classList.remove("open");
-            }
+        var current = document.getElementsByClassName("open");
+
+        if (current.length > 0) {
+            current[0].className = current[0].className.replace(" open", "");
         }
-        opt[i].classList.toggle("open");
+        
+        this.className += " open";
+
+        // opt[i].classList.toggle("open");
     });  
 }
   

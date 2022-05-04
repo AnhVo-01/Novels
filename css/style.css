@@ -120,10 +120,14 @@ header .image img{
 
 /* -------------------------------------------------------------------- */
 .menu{
-    position: fixed;
-    /* width: 100%; */
-    transition: var(--tran-05);
-    z-index: 500;  
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 500;
+    color: #4E4E4E;
+    line-height: 30px;
+    height: fit-content;
+    background: #2e3740;
 }
 .menu a:hover{
     text-decoration: none;
@@ -141,6 +145,9 @@ header .image img{
 .menu-links{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    transition: var(--tran-05);
+    display: block;
 }
 .menu-links .dropdown{
     display: flex;
