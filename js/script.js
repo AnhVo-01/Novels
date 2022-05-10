@@ -1,7 +1,6 @@
-const body = document.querySelector('body'),
-    sidebar = body.querySelector('nav'),
-    toggle = body.querySelector(".toggle");
+const menuBtn = document.querySelector(".menu-icon")
 
-toggle.addEventListener("click" , () =>{
-    sidebar.classList.toggle("close");
-})
+menuBtn.addEventListener("click" , () =>{
+    var headContainer = document.querySelector(".head-local");
+    headContainer.classList.toggle("act");
+});
