@@ -31,28 +31,6 @@
     --text-color: #9a9a9a;
 }
 
-/* ----- Mobile View --------------------------------------------- */
-@media (min-width: 576px){
-    .container {
-        max-width: 540px;
-    }
-}
-@media (min-width: 768px){
-    .container {
-        width: 750px;
-    }
-}
-@media (min-width: 992px){
-    .container {
-        width: 970px;
-    }
-}
-@media (min-width: 1200px){
-    .container {
-        max-width: 1170px;
-    }
-}
-
 /* ----- Lager View ----------------------------------------------------- */
 
 a{
@@ -77,6 +55,7 @@ body{
     margin: 0 auto;
     position: relative;
     z-index: 200;
+    max-width: 1170px;
 }
 .sidebar header .toggle{
     position: absolute;
@@ -125,6 +104,16 @@ header .image img{
 }
 .header a:hover{
     text-decoration: none;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.logo .menu-icon{
+    display: none;
+    cursor: pointer;
 }
 .menu{
     width: 100%;
@@ -407,7 +396,7 @@ header .image img{
 .list{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 0 20px;
 }
 .list-chapter{
     background: var(--body-color);
@@ -461,10 +450,36 @@ footer a{
     .container {
         max-width: 970px;
     }
+    .menu-icon{
+        display: block !important;
+    }
+    .novel-info{
+        grid-template-columns: 1fr 2fr;
+    }
+    .column{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .list{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .info{
+        border-right: 1px solid #DDD;
+    }
+    .l-chapter{
+        display: none;
+    }
 }
 @media (max-width: 768px){
     .container {
         max-width: 750px;
+    }
+    .list-novels{
+        display: none;
+    }
+}
+@media (max-width: 576px){
+    .container {
+        max-width: 540px;
     }
     .column, .novel-info, .list{
         grid-template-columns: repeat(1, 1fr);
@@ -475,14 +490,6 @@ footer a{
     }
     .card{
         justify-content: center;
-    }
-    .list-novels{
-        display: none;
-    }
-}
-@media (max-width: 576px){
-    .container {
-        max-width: 540px;
     }
     .list-novels{
         display: none;
